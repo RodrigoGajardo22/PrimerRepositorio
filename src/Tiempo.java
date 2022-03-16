@@ -14,20 +14,20 @@ public class Tiempo {
 		}
 	
 	//-------------------------------------------
-	public void formatoLargo() {
+	public String formatoLargo() {
 	DateTimeFormatter dtf =
 		    DateTimeFormatter
 		      .ofPattern("EEEE, dd 'de' MMMM 'de' yyyy 'a las' hh:mm:ss");
 	
-		System.out.println("Formato largo: " + fechaConHora.format(dtf));
+		 return "Formato largo: " + fechaConHora.format(dtf);
 	}
 	
 	//-------------------------------------------------------
-	public void formatoCorto() {
+	public String  formatoCorto() {
 		
 		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd'/'MM'/'yyyy' a las' hh:mm:ss");
 		
-		System.out.println("Formato corto: " + fechaConHora.format(dtf));
+		return "Formato corto: " + fechaConHora.format(dtf);
 		
 	}
 }
